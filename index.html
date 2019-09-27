@@ -7,14 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- Title -->
     <title>Jive - Education &amp; | Home</title>
-
     <!-- Favicon -->
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
 
 </head>
 
@@ -105,23 +103,17 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(img/bg-img/.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <!-- Hero Content -->
-                    <div class="hero-content text-center">
-                        <h2>Let's Study Together</h2>
-                        <a href="#" class="btn clever-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
+    <!-- <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(img/bg-img/.jpg);"> -->
+        <div id="slider">
+            <figure>
+                <img src="./img/banner.jpg" alt>
+                <img src="./img/banner.jpg" alt>
+                <img src="./img/banner.jpg" alt>
+                <img src="./img/banner.jpg" alt>
+            </figure>
         </div>
-    </section>
-    <!-- ##### Hero Area End ##### -->
+    <!-- </section> -->
 
-    <!-- ##### Cool Facts Area Start ##### -->
     <section class="cool-facts-area section-padding-100-0">
         <div class="container">
             <div class="row">
@@ -579,6 +571,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 
 </html>
